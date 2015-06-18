@@ -6,13 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-<<<<<<< HEAD
     tools:context=".Main" >
-
-=======
-    android:gravity="center_horizontal"
-    tools:context=".Main" 
-    android:background="@android:color/darker_gray"> 
 
     <TextView 
         android:id="@+id/home"
@@ -20,7 +14,6 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:gravity="center_vertical"
-        android:text="Home"
+        android:text="@string/home"
         android:textSize="48sp"/>
->>>>>>> try_hardEr_ZN
 </RelativeLayout>

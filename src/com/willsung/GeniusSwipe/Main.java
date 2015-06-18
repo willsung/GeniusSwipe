@@ -20,13 +20,6 @@ public class Main extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 	}
-<<<<<<< HEAD
-	
-	
-	
-=======
-
->>>>>>> try_hardEr_ZN
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -71,5 +64,4 @@ public class Main extends Activity {
 	        System.exit(0);  
 	    }
 	}
-
 }
