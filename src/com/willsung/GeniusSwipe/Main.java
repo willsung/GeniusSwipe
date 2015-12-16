@@ -33,7 +33,7 @@ public class Main extends Activity {
 			finish();
 		}
 		if(item.getItemId() == 2){
-			Toast.makeText(getApplicationContext(), "≤‚ ‘", Toast.LENGTH_SHORT).show();
+			Toast.makeText(getApplicationContext(), "Test", Toast.LENGTH_SHORT).show();
 		}
 		return super.onOptionsItemSelected(item);
 	}
