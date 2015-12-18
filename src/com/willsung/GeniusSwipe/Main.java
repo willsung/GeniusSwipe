@@ -23,17 +23,22 @@ public class Main extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		menu.add(0, 1, 1, R.string.exit);
-		menu.add(0, 2, 2, R.string.about);
+		menu.add(0, 1, 0, R.string.exit);
+		menu.add(0, 2, 0, R.string.test);
+		menu.add(0, 3, 0, R.string.about);
 		return super.onCreateOptionsMenu(menu);
 	}
 	
 	public boolean onOptionsItemSelected(MenuItem item){
 		if(item.getItemId() == 1){
+			Toast.makeText(getApplicationContext(), "Exit", Toast.LENGTH_SHORT).show();
 			finish();
 		}
 		if(item.getItemId() == 2){
 			Toast.makeText(getApplicationContext(), "Test", Toast.LENGTH_SHORT).show();
+		}
+		if(item.getItemId() == 3){
+			Toast.makeText(getApplicationContext(), "About",Toast.LENGTH_SHORT).show();
 		}
 		return super.onOptionsItemSelected(item);
 	}
