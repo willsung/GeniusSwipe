@@ -51,14 +51,14 @@ public class Main extends Activity {
 		}
 		return false;
 	}
-	
+
 	public void exitBy2Click(){
 		Timer exitb2c = null;  
 	    if (isExit == false) {  
 	        isExit = true;
 	        Toast.makeText(this, "再点击一次退出!", Toast.LENGTH_SHORT).show();  
 	        exitb2c = new Timer();  
-	        exitb2c.schedule(new TimerTask() {  
+	        exitb2c.schedule(new TimerTask() {
 	            @Override  
 	            public void run() {  
 	                isExit = false;
