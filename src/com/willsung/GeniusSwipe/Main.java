@@ -20,6 +20,7 @@ public class Main extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 	}
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -28,45 +29,49 @@ public class Main extends Activity {
 		menu.add(0, 3, 0, R.string.about);
 		return super.onCreateOptionsMenu(menu);
 	}
-	
-	public boolean onOptionsItemSelected(MenuItem item){
-		if(item.getItemId() == 1){
-			Toast.makeText(getApplicationContext(), "Exit", Toast.LENGTH_SHORT).show();
+
+	public boolean onOptionsItemSelected(MenuItem item) {
+		if (item.getItemId() == 1) {
+			Toast.makeText(getApplicationContext(), "Exit", Toast.LENGTH_SHORT)
+					.show();
 			finish();
 		}
-		if(item.getItemId() == 2){
-			Toast.makeText(getApplicationContext(), "Test", Toast.LENGTH_SHORT).show();
+		if (item.getItemId() == 2) {
+			Toast.makeText(getApplicationContext(), "Test", Toast.LENGTH_SHORT)
+					.show();
 		}
-		if(item.getItemId() == 3){
-			Toast.makeText(getApplicationContext(), "About",Toast.LENGTH_SHORT).show();
+		if (item.getItemId() == 3) {
+			Toast.makeText(getApplicationContext(), "About", Toast.LENGTH_SHORT)
+					.show();
 		}
 		return super.onOptionsItemSelected(item);
 	}
-	
-	public boolean onKeyDown(int keycode, KeyEvent event){
-		if(keycode == KeyEvent.KEYCODE_BACK){
-			if(event.getAction() == KeyEvent.ACTION_DOWN && event.getRepeatCount() == 0){
+
+	public boolean onKeyDown(int keycode, KeyEvent event) {
+		if (keycode == KeyEvent.KEYCODE_BACK) {
+			if (event.getAction() == KeyEvent.ACTION_DOWN
+					&& event.getRepeatCount() == 0) {
 				exitBy2Click();
 			}
 		}
 		return false;
 	}
 
-	public void exitBy2Click(){
-		Timer exitb2c = null;  
-	    if (isExit == false) {  
-	        isExit = true;
-	        Toast.makeText(this, "再点击一次退出!", Toast.LENGTH_SHORT).show();  
-	        exitb2c = new Timer();  
-	        exitb2c.schedule(new TimerTask() {
-	            @Override  
-	            public void run() {  
-	                isExit = false;
-	            }  
-	        }, 1500);
-	    } else {  
-	        finish();  
-	        System.exit(0);  
-	    }
+	public void exitBy2Click() {
+		Timer exitb2c = null;
+		if (isExit == false) {
+			isExit = true;
+			Toast.makeText(this, "再点击一次退出!", Toast.LENGTH_SHORT).show();
+			exitb2c = new Timer();
+			exitb2c.schedule(new TimerTask() {
+				@Override
+				public void run() {
+					isExit = false;
+				}
+			}, 1500);
+		} else {
+			finish();
+			System.exit(0);
+		}
 	}
 }
