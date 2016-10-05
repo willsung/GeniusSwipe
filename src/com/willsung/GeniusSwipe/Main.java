@@ -1,5 +1,3 @@
-//¼á³Ö --> ÊÕ»ñ
-
 package com.willsung.GeniusSwipe;
 
 import java.util.Timer;
@@ -61,7 +59,7 @@ public class Main extends Activity {
 		Timer exitb2c = null;
 		if (isExit == false) {
 			isExit = true;
-			Toast.makeText(this, "ÔÙµã»÷Ò»´ÎÍË³ö!", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "ï¿½Ùµï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ë³ï¿½!", Toast.LENGTH_SHORT).show();
 			exitb2c = new Timer();
 			exitb2c.schedule(new TimerTask() {
 				@Override
